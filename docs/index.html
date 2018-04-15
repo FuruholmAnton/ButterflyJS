@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS</title>
+
+    <style>
+        html {
+            height: 100%;
+            font-size: 18px;
+            font-family: sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100%;
+            margin: 0;
+        }
+        .edit::before {
+            content: '{ ';
+        }
+        .edit::after {
+            content: ' }';
+        }
+        code {
+            max-width: 50%;
+        }
+
+        ul {
+            list-style: none;
+        }
+        li {
+            padding-left: 2em;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+
+    <template id="tpl">
+        <td><input type="text"></td>
+        <td><input type="text"></td>
+    </template>
+
+    <h1>CSS helper</h1>
+
+    <table id="table">
+        <tr>
+            <td><input type="text" value="background"></td>
+            <td><input type="text" value="#a8dae6"></td>
+        </tr>
+        <tr>
+            <td><input type="text" value="rotate"></td>
+            <td><input type="text" value="-10deg"></td>
+        </tr>
+        <tr>
+            <td><input type="text" value="x"></td>
+            <td><input type="text" value="-10px"></td>
+        </tr>
+        <tr>
+            <td><input type="text" value="scale"></td>
+            <td><input type="text" value="1.1"></td>
+        </tr>
+        
+    </table>
+    <button>Add row</button>
+
+    <br>
+    <br>
+    <code id="code"></code>
+    
+    <script src="dist/script.es5.js"></script>
+</body>
+</html>
