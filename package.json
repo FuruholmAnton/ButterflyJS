@@ -1,12 +1,13 @@
 {
-  "name": "css",
+  "name": "butterfly",
   "author": "Anton Furuholm <anton.furuholm@gmail.com> (https://www.furuholm.com/)",
   "version": "1.0.0",
-  "description": "css",
-  "main": "css.js",
+  "description": "Style with JavaScript",
+  "main": "butterfly.js",
   "repository": "",
   "keywords": [
-    "javascript"
+    "javascript",
+    "css"
   ],
   "license": "MIT",
   "scripts": {

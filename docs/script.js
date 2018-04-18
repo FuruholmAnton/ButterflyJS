@@ -1,5 +1,5 @@
 
-import css, {entries} from '../css';
+import css from '../css';
 
 const rows = document.getElementsByTagName('tr');
 const table = document.getElementById('table');
