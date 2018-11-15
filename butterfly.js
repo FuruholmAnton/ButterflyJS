@@ -19,7 +19,8 @@ export default function css(el, styles) {
         const defaultTranslate = { x: 0, y: 0, z: 0 };
         let transformString = '';
         let translateString = '';
-        for (let key in styles) {
+
+        for (const key in styles) {
             if (styles.hasOwnProperty(key)) {
                 const value = styles[key];
                 switch (key) {
@@ -40,7 +41,16 @@ export default function css(el, styles) {
                     case 'scaleY':
                         transformString += `scaleY(${value}) `;
                         break;
+                    case 'clearProps':
+                        key.split(',').forEach((prop) => {
+                            el.style.removeProperty(prop);
+                        });
+                        if (el.style == '') {
+                            el.removeAttribute('style');
+                        }
+                        break;
                     default:
+                        // The most common way
                         el.style[key] = value;
                         break;
                 }
