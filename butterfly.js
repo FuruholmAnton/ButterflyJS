@@ -42,10 +42,10 @@ export default function css(el, styles) {
                         transformString += `scaleY(${value}) `;
                         break;
                     case 'clearProps':
-                        key.split(',').forEach((prop) => {
+                        value.split(',').forEach((prop) => {
                             el.style.removeProperty(prop);
                         });
-                        if (el.style == '') {
+                        if (el.getAttribute('style') == '') {
                             el.removeAttribute('style');
                         }
                         break;
