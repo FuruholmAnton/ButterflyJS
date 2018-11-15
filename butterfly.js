@@ -13,7 +13,7 @@ export default function css(el, styles) {
             css(n, styles);
         });
     } else if (typeof el == 'string') {
-        css(document.querySelector(el), styles);
+        css(document.querySelectorAll(el), styles);
     } else {
         // Cache
         const defaultTranslate = { x: 0, y: 0, z: 0 };
